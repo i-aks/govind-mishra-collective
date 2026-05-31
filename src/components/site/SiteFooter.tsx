@@ -23,7 +23,7 @@ export function SiteFooter() {
           </div>
           <div className="space-y-3">
             <p className="eyebrow">Connect</p>
-            <a href="#" className="block text-secondary hover:text-primary">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/govindmishraa/" target="_blank" rel="noopener noreferrer" className="block text-secondary hover:text-primary">LinkedIn</a>
             <a href="mailto:hello@govindmishra.com" className="block text-secondary hover:text-primary">Email</a>
             <a href="#" className="block text-secondary hover:text-primary">WhatsApp</a>
           </div>
