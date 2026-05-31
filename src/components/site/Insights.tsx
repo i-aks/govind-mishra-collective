@@ -35,11 +35,20 @@ export function Insights() {
               className="block cursor-pointer"
             >
               <div className="aspect-[4/3] mb-6 overflow-hidden bg-primary/[0.04] border border-border relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-[5rem] text-primary/8 select-none">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
+                {a.image ? (
+                  <img
+                    src={a.image}
+                    alt={a.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="font-display text-[5rem] text-primary/8 select-none">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
               <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
