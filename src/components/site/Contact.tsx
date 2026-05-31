@@ -90,13 +90,20 @@ export function Contact() {
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
               Pick a time that works for you. Bookings are confirmed instantly.
             </p>
-            <div className="mt-6 overflow-hidden border border-border">
-              <iframe
-                src={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=fafaf8&text_color=0f172a&primary_color=c8a96a`}
-                title="Book a call with Govind Mishra"
-                className="w-full h-[640px] bg-surface"
-                frameBorder={0}
-              />
+            <div ref={frameRef} className="mt-6 overflow-hidden border border-border">
+              {loadFrame ? (
+                <iframe
+                  src={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=fafaf8&text_color=0f172a&primary_color=c8a96a`}
+                  title="Book a call with Govind Mishra"
+                  className="w-full h-[640px] bg-surface"
+                  loading="lazy"
+                  frameBorder={0}
+                />
+              ) : (
+                <div className="w-full h-[640px] bg-surface flex items-center justify-center">
+                  <span className="text-sm text-muted-foreground">Loading scheduler…</span>
+                </div>
+              )}
             </div>
           </div>
         </aside>
