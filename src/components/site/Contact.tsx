@@ -1,14 +1,17 @@
 import { Section } from "./Section";
 
+// Replace this with your real Calendly link, e.g. "https://calendly.com/govindmishra/30min"
+const CALENDLY_URL = "https://calendly.com/govindmishra/30min";
+
 const channels = [
   {
     label: "Book a Consultation",
     value: "Schedule a 30-minute discovery call",
-    href: "#",
+    href: CALENDLY_URL,
     primary: true,
   },
   { label: "Email", value: "hello@govindmishra.com", href: "mailto:hello@govindmishra.com" },
-  { label: "LinkedIn", value: "linkedin.com/in/govindmishra", href: "#" },
+  { label: "LinkedIn", value: "linkedin.com/in/govindmishraa", href: "https://www.linkedin.com/in/govindmishraa/" },
   { label: "WhatsApp", value: "+91 00000 00000", href: "#" },
 ];
 
@@ -60,21 +63,21 @@ export function Contact() {
         </div>
 
         <aside className="lg:col-span-5">
-          <div className="border border-border bg-surface-elevated p-8 md:p-10">
+          <div className="border border-border bg-surface-elevated p-6 md:p-8">
             <p className="eyebrow">Calendly</p>
             <h3 className="mt-3 font-display text-2xl text-primary leading-snug">
               Direct booking for discovery calls
             </h3>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-              Embed your Calendly link here to let visitors self-schedule a
-              30-minute introductory conversation.
+              Pick a time that works for you. Bookings are confirmed instantly.
             </p>
-            <div className="mt-8 aspect-[4/5] border border-dashed border-border bg-surface flex items-center justify-center text-center px-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                Calendly widget
-                <br />
-                placeholder
-              </p>
+            <div className="mt-6 overflow-hidden border border-border">
+              <iframe
+                src={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=fafaf8&text_color=0f172a&primary_color=c8a96a`}
+                title="Book a call with Govind Mishra"
+                className="w-full h-[640px] bg-surface"
+                frameBorder={0}
+              />
             </div>
           </div>
         </aside>
