@@ -1,10 +1,10 @@
 import { Section } from "./Section";
 import { motion } from "framer-motion";
-import keynote from "@/assets/gallery-keynote.jpg";
-import workshop from "@/assets/gallery-workshop.jpg";
-import hands from "@/assets/gallery-hands.jpg";
-import audience from "@/assets/gallery-audience.jpg";
-import coaching from "@/assets/gallery-coaching.jpg";
+import keynote from "@/assets/gallery-keynote.webp";
+import workshop from "@/assets/gallery-workshop.webp";
+import hands from "@/assets/gallery-hands.webp";
+import audience from "@/assets/gallery-audience.webp";
+import coaching from "@/assets/gallery-coaching.webp";
 
 const items = [
   { src: keynote, alt: "Govind Mishra delivering a keynote", span: "row-span-2" },

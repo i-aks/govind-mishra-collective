@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import portrait from "@/assets/govind-portrait.jpg";
+import portrait from "@/assets/govind-portrait.webp";
 
 const stats = [
   { value: "15+", label: "Years Experience" },
