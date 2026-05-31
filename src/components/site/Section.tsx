@@ -19,7 +19,7 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={`py-24 md:py-32 ${className}`}>
+    <section id={id} className={`py-20 md:py-28 ${className}`}>
       <div className="container-luxe">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
