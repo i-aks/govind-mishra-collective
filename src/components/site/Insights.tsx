@@ -1,50 +1,9 @@
 import { Section } from "./Section";
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
+import { essays } from "@/data/essays";
 
-const articles = [
-  {
-    cat: "Essay",
-    title: "Confidence is Prepared Clarity",
-    excerpt:
-      "We mistake confidence for personality. In truth, it is the residue of having thought a thing through.",
-    read: "6 min read",
-  },
-  {
-    cat: "Philosophy",
-    title: "Communication Begins With Thinking",
-    excerpt:
-      "Before we shape sentences, we shape attention. The quality of our words tracks the quality of our noticing.",
-    read: "8 min read",
-  },
-  {
-    cat: "Discipline",
-    title: "Discipline Builds Freedom",
-    excerpt:
-      "The disciplined life is not narrow — it is the only kind of life wide enough to hold our deepest commitments.",
-    read: "5 min read",
-  },
-  {
-    cat: "Presence",
-    title: "The Power of Attention",
-    excerpt:
-      "Attention is the currency of leadership. Spend it carelessly and nothing else you do will compound.",
-    read: "7 min read",
-  },
-  {
-    cat: "Systems",
-    title: "Motivation vs Systems",
-    excerpt:
-      "Motivation is a mood. Systems are the architecture that protect your work from the weather of your mood.",
-    read: "6 min read",
-  },
-  {
-    cat: "Leadership",
-    title: "Leadership Through Presence",
-    excerpt:
-      "People do not follow titles. They follow a quality of attention they can feel in the room.",
-    read: "9 min read",
-  },
-];
+const articles = essays;
 
 export function Insights() {
   return (
