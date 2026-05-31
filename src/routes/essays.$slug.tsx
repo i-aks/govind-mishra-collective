@@ -75,7 +75,7 @@ function EssayPage() {
         </p>
 
         <div className="mt-12 space-y-7 text-base md:text-lg leading-relaxed text-secondary">
-          {essay.body.map((p, i) => (
+          {essay.body.map((p: string, i: number) => (
             <p key={i}>{p}</p>
           ))}
         </div>
