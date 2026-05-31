@@ -17,6 +17,24 @@ const channels = [
 ];
 
 export function Contact() {
+  const frameRef = useRef<HTMLDivElement | null>(null);
+  const [loadFrame, setLoadFrame] = useState(false);
+
+  useEffect(() => {
+    if (!frameRef.current || loadFrame) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setLoadFrame(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    io.observe(frameRef.current);
+    return () => io.disconnect();
+  }, [loadFrame]);
+
   return (
     <Section
       id="contact"
