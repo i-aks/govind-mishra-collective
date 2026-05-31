@@ -1,14 +1,17 @@
 import { Section } from "./Section";
 
+// Replace this with your real Calendly link, e.g. "https://calendly.com/govindmishra/30min"
+const CALENDLY_URL = "https://calendly.com/govindmishra/30min";
+
 const channels = [
   {
     label: "Book a Consultation",
     value: "Schedule a 30-minute discovery call",
-    href: "#",
+    href: CALENDLY_URL,
     primary: true,
   },
   { label: "Email", value: "hello@govindmishra.com", href: "mailto:hello@govindmishra.com" },
-  { label: "LinkedIn", value: "linkedin.com/in/govindmishra", href: "#" },
+  { label: "LinkedIn", value: "linkedin.com/in/govindmishraa", href: "https://www.linkedin.com/in/govindmishraa/" },
   { label: "WhatsApp", value: "+91 00000 00000", href: "#" },
 ];
 
