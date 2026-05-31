@@ -35,6 +35,7 @@ export function Gallery() {
               src={it.src}
               alt={it.alt}
               loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
