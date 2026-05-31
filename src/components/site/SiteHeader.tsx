@@ -70,7 +70,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-border bg-background">
           <div className="container-luxe py-6 flex flex-col gap-5">
             {nav.map((n) => (
               <a
