@@ -28,14 +28,14 @@ export function SiteHeader() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container-luxe flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3 group">
-          <span className="font-display text-lg md:text-xl tracking-tight text-primary">
+      <div className="container-luxe flex items-center justify-between gap-6 h-16 md:h-20">
+        <Link to="/" className="flex items-center gap-3 group shrink-0">
+          <span className="font-display text-lg md:text-xl tracking-tight text-primary whitespace-nowrap">
             Govind <span className="text-gold">Mishra</span>
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-9">
+        <nav className="hidden lg:flex items-center gap-8 xl:gap-9">
           {nav.map((n) => (
             <a
               key={n.href}
@@ -47,10 +47,10 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block shrink-0">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-sm bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-secondary transition-colors"
+            className="inline-flex items-center gap-2 whitespace-nowrap rounded-sm bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-secondary transition-colors"
           >
             Book a Consultation
           </a>
@@ -58,7 +58,7 @@ export function SiteHeader() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden p-2 -mr-2 text-primary"
+          className="lg:hidden p-2 -mr-2 text-primary"
           aria-label="Toggle menu"
         >
           <div className="w-6 flex flex-col gap-1.5">
@@ -70,7 +70,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-border bg-background">
           <div className="container-luxe py-6 flex flex-col gap-5">
             {nav.map((n) => (
               <a

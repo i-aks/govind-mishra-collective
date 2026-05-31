@@ -1,10 +1,10 @@
 import { Section } from "./Section";
 import { motion } from "framer-motion";
-import keynote from "@/assets/gallery-keynote.jpg";
-import workshop from "@/assets/gallery-workshop.jpg";
-import hands from "@/assets/gallery-hands.jpg";
-import audience from "@/assets/gallery-audience.jpg";
-import coaching from "@/assets/gallery-coaching.jpg";
+import keynote from "@/assets/gallery-keynote.webp";
+import workshop from "@/assets/gallery-workshop.webp";
+import hands from "@/assets/gallery-hands.webp";
+import audience from "@/assets/gallery-audience.webp";
+import coaching from "@/assets/gallery-coaching.webp";
 
 const items = [
   { src: keynote, alt: "Govind Mishra delivering a keynote", span: "row-span-2" },
@@ -35,6 +35,7 @@ export function Gallery() {
               src={it.src}
               alt={it.alt}
               loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
